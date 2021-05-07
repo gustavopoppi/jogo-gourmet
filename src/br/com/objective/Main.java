@@ -12,7 +12,7 @@ public class Main {
 
 	private static void configurarJogo() {
 
-		if (TextosDialog.penseEmUmPratoQueVoceGoste() == -1)
+		if (TextosDialog.penseEmUmPratoQueVoceGosta() == -1)
 			sairDoJogo();
 
 		inserirArvoreInicial();
