@@ -9,7 +9,7 @@ import static javax.swing.JOptionPane.showInputDialog;
 public abstract class TextosDialog {
 
 	public static int aComidaQueVocePensouEh(String nomeComida) {
-		return showConfirmDialog(null, String.format(Constantes.COMIDA_QUE_VOCE_PENSOU_EH, nomeComida), Constantes.TITULO_DIALOG,
+		return showConfirmDialog(null, String.format(Constantes.A_COMIDA_QUE_VOCE_PENSOU_EH, nomeComida), Constantes.TITULO_DIALOG,
 				YES_NO_OPTION);
 	}
 
@@ -17,6 +17,11 @@ public abstract class TextosDialog {
 		showConfirmDialog(null, "Acertei de novo!", Constantes.TITULO_DIALOG, DEFAULT_OPTION, INFORMATION_MESSAGE);
 	}
 
+	public static int penseEmUmPratoQueVoceGosta() {
+		return showConfirmDialog(null, "Pense em um prato que gosta", Constantes.TITULO_DIALOG, DEFAULT_OPTION,
+				INFORMATION_MESSAGE);
+	}
+	
 	public static String qualPratoVocePensou() {
 		return showInputDialog(Constantes.QUAL_PRATO_VOCE_PENSOU);
 	}
@@ -25,8 +30,4 @@ public abstract class TextosDialog {
 		return showInputDialog(String.format(Constantes.PRATO_PENSADO_EH_PRATO_ANTIGO_NAO, pratoPensado, pratoAntigo));
 	}
 
-	public static int penseEmUmPratoQueVoceGosta() {
-		return showConfirmDialog(null, "Pense em um prato que gosta", Constantes.TITULO_DIALOG, DEFAULT_OPTION,
-				INFORMATION_MESSAGE);
-	}
 }
