@@ -10,11 +10,7 @@ public class Main {
 		configurarJogo();
 	}
 
-	private static void configurarJogo() {
-
-		if (TextosDialog.penseEmUmPratoQueVoceGosta() == -1)
-			sairDoJogo();
-
+	private static void configurarJogo() {		
 		inserirArvoreInicial();
 	}
 
@@ -32,6 +28,8 @@ public class Main {
 
 	protected static void iniciarJogo(NoArvore raiz) {
 		while (sairJogo != -1) {
+			if (TextosDialog.penseEmUmPratoQueVoceGosta() == -1)
+				break;
 			raiz.perguntar();
 		}
 	}
